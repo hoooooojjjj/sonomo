@@ -1,0 +1,9 @@
+.active{
+    color : red;
+}
+.newActive{
+    color : black;
+}
+h1{
+    transition: all .5s ease-in-out;
+}
