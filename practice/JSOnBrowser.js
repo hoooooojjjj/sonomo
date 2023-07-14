@@ -12,26 +12,25 @@
 
 
 // ** document 객체로 html에 접근하는 방법 **
-const title = document.getElementById("title"); // => HTML요소를 가져올 때도 "객체" 형태로 가져온다는 것을 꼭 기억해야함!!
-                                                // => title이란 변수에 h1 태그의 정보가 "객체 형태"로 저장된 것!
-                                                // => title은 객체임
-console.dir(title);
-title.innerText = "Got you!";
+// const title = document.getElementById("title"); // => HTML요소를 가져올 때도 "객체" 형태로 가져온다는 것을 꼭 기억해야함!!
+//                                                 // => title이란 변수에 h1 태그의 정보가 "객체 형태"로 저장된 것!
+//                                                 // => title은 객체임
+// console.dir(title);
+// title.innerText = "Got you!";
 
 // HTMLcollection으로 저장되는 놈들 - 값이 여러 개일 수 있는 class와 tag 요소 가져오는 메서드
 // 얘네는 하나의 요소만 가져온다고 해도 HTMLcollection 형태로 저장되기 때문에(like array)
 // 바로 hellos.~~ span.~~ 가 안된다. hellos[1].~~ 같이 인덱싱을 해줘야 사용할 수 있다.
-const hellos = document.getElementsByClassName("hello");
-console.log(hellos);
-const span = document.getElementsByTagName("span");
-console.log(span);
+// const hellos = document.getElementsByClassName("hello");
+// console.log(hellos);
+// const span = document.getElementsByTagName("span");
+// console.log(span);
 
 // querySelector(), querySelectorAll()
 // 얘네가 많이 쓰임 -> CSS 선택자처럼 사용될 수 있기 때문이다.
-const h1 = document.querySelector(".hello h1");
-console.log(h1);
+// const h1 = document.querySelector(".hello h1");
+// console.log(h1);
 // 즉 연결 선택자, 속성 선택자를 사용하듯이 사용할 수 있다!! 그래서 더 편리하다.
-
 
 // // ** Event **
 
@@ -92,6 +91,6 @@ console.log(h1);
 // 위와 같은 코드를 한 줄로 줄일 수 있는 코드가 있다.
 // => * classList.toggle() *
 // 이 함수는 만약 인자가 class에 존재하면 인자를 삭제하고 존재하지 않으면 인자를 추가한다.
-title.addEventListener("click", function(){
-    title.classList.toggle("active")
-});
+// title.addEventListener("click", function(){
+//     title.classList.toggle("active")
+// });
