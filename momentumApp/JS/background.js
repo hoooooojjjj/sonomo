@@ -32,3 +32,4 @@ document.body.appendChild(imgNode); // 3. body에 자식 요소로 추가하기 
 // imgNode.setAttributeNode(imgNodeAttribute);
 
 // document.body.appendChild(imgNode); 
+
