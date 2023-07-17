@@ -16,10 +16,13 @@
     <!-- 링크의 기본동작 : 클릭 시 페이지로 이동 -->
     <h2 id="clock"></h2>
     <h1 id="greeting" class="hidden"></h1>
+
     <form id="todo-form">
-        <input type="text" placeholder="To Do를 입력하고 엔터를 누르세요" required>
-        <ul id="todo-list"></ul>
+        <input id ="todo-input" type="text" placeholder="To Do를 입력하고 엔터를 누르세요" required>
     </form>
+    
+    <!-- 투두리스트를 form 밖으로 빼내면 이런 일은 없었다.. -->
+    <ul id="todo-list"></ul> 
     <div id="quote">
         <span></span>
         <span></span>
