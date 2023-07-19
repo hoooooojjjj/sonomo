@@ -42,8 +42,8 @@ const quotes = [
     },
 ];
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector("#quote div:first-child");
+const author = document.querySelector("#quote div:last-child");
 
 // Math.random() -> 0 ~ 1까지의 수를 랜덤하게 반환
 // 1. 원하는 개수만큼 곱해주고 2. Math.floor()을 통해 내림해주면 

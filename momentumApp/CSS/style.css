@@ -1,8 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+}
 .hidden{
     display: none;
 }
-body{
+
+/* body{
     color : red;
     background: no-repeat;
     background-size: cover;
 }
+
+#clock{
+    text-align: center;
+    position: relative;
+    bottom: -130px;
+}
+
+#greeting{
+    text-align: center;
+    position: relative;
+    bottom: -130px;
+}
+
+#quote{
+    text-align: center;
+    font-size: 10px;
+    position: relative;
+    bottom: -250px;
+} */
+

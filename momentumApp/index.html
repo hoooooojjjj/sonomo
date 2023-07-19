@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="CSS/style.css"/>
 </head>
 <body>
+    <div id="container">
     <form class="hidden" id="login-form"> 
     <!-- form의 기본동작 : 자동 submit -->
     <input required maxlength="15" type="text" placeholder="이름이 뭔가요?">
@@ -21,16 +22,18 @@
         <input id ="todo-input" type="text" placeholder="To Do를 입력하고 엔터를 누르세요" required>
     </form>
     
-    <!-- 투두리스트를 form 밖으로 빼내면 이런 일은 없었다.. -->
+    <!-- 투두리스트를 form 밖으로 빼내면 이런 일은 없었다.. form 안에 input과 button이 동시에 있으면 안되는듯?-->
     <ul id="todo-list"></ul> 
+
     <div id="quote">
-        <span></span>
-        <span></span>
+        <div></div>
+        <div></div>
     </div>
     <script src="JS/greetings.js"></script>
     <script src="JS/clock.js"></script>
     <script src="JS/quotes.js"></script>
     <script src="JS/background.js"></script>
     <script src="JS/todo.js"></script>
+</div>
 </body>
 </html>
