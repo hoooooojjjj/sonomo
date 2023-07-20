@@ -1,5 +1,4 @@
 const todoModalOpenBtn = document.querySelector("#todoModalOpen");
-const modalCloseBtn = document.querySelector(".close");
 const modalContent = document.querySelector('.modal-content');
 
 
@@ -18,4 +17,3 @@ function modalClose(){ // x 누르면 모달 닫힘
 
 todoModalOpenBtn.addEventListener("click", modalOpen); // 모달 여는 이벤트
 
-modalCloseBtn.addEventListener("click",modalClose); // 모달 닫는 이벤트
