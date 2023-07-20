@@ -13,6 +13,11 @@ const todaysimg = images[randomIndexToImg];
 
 document.body.style.backgroundImage = `url(${todaysimg})`; // 난 body를 통해서 배경을 채웠다.
 
+// 배경색이 어두우면 글자색을 흰색으로
+if(todaysimg === "img/3.jpeg" || todaysimg === "img/4.jpeg" || todaysimg === "img/5.jpeg" || todaysimg === "img/6.jpeg"){
+    document.body.classList.add("white");
+}
+
 
 // 새로운 요소를 추가하기
 // 1. 요소를 생성한다. 2. 요소의 속성 및 텍스트에 값을 할당한다 3. 부모요소에 append한다.
