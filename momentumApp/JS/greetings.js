@@ -1,3 +1,10 @@
+const hello = document.querySelector("#hello");
+const clock1 = document.querySelector("#clock");
+const quote1 = document.querySelector("#quote div:first-child");
+const author1 = document.querySelector("#quote div:last-child");
+const toDoForm1 = document.querySelector("#todo-form");
+const toDoList1 = document.querySelector("#todo-list");
+const toDoInput1 = toDoForm1.querySelector("input");
 
 // *** form 태그에 관하여 feat-preventDefault()***
 
@@ -26,14 +33,31 @@ function onLoginSubmit(event){
 }
 
 function paintGreeting(username){
+    // 로그인 후 다 보여주기
     greeting.classList.remove("hidden");
-    greeting.innerText = `환영합니다, ${username}님.`;
+        greeting.innerText = `Hello, ${username}.`;
+    clock1.classList.remove(HIDDEN_CLASSNAME);
+    quote1.classList.remove(HIDDEN_CLASSNAME);
+    author1.classList.remove(HIDDEN_CLASSNAME);
+
+    // hello 숨기기
+    hello.classList.add(HIDDEN_CLASSNAME);
+
+    // window.open("/index.html");
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 if(savedUsername === null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit",onLoginSubmit);
+
+    // 로그인 전 다 숨기기
+    clock1.classList.add(HIDDEN_CLASSNAME);
+    quote1.classList.add(HIDDEN_CLASSNAME);
+    author1.classList.add(HIDDEN_CLASSNAME);
+    toDoForm1.classList.add(HIDDEN_CLASSNAME);
+
+
 }
 else { 
     paintGreeting(savedUsername);

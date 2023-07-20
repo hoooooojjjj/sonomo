@@ -1,39 +1,54 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
-#container{
-}
+
 .hidden{
     display: none;
 }
 
-.white{
+body{
     color : white;
-}
-
-/* body{
-    color : red;
     background: no-repeat;
     background-size: cover;
 }
 
-#clock{
-    text-align: center;
+.black{
+    color : black;
+}
+
+#greetingContainer{
     position: relative;
-    bottom: -130px;
+    bottom: -165px;
+    text-align: center;
+}
+#login-input{
+    width: 265px;
+    border: none;
+    border-bottom: 3px solid #000; 
+    outline: none; 
+    background-color: #00000000;
+}
+
+#enterContainer{
+    position: relative;
+    bottom: -120px;
+    text-align: center;
+}
+#clock{
+    font-size: 70px;
+    height: 70px;
 }
 
 #greeting{
-    text-align: center;
-    position: relative;
-    bottom: -130px;
+    font-size: 20px;
 }
 
 #quote{
     text-align: center;
-    font-size: 10px;
     position: relative;
-    bottom: -250px;
-} */
+    bottom: -305px;
+    font-size: 5px;
+} 
 

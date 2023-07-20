@@ -5,10 +5,10 @@ function getClock(){
     // tring.padStart(문자열 길이, 채워넣을 문자) -> 문자열의 길이를 일정하게 유지하고 앞 빈칸에 원하는 문자를 채워넣을 수 있음.
     const hours = String(date.getHours()).padStart(2,'0');
     const minutes = String(date.getMinutes()).padStart(2,'0');
-    const seconds = String(date.getSeconds()).padStart(2,'0');
+    // const seconds = String(date.getSeconds()).padStart(2,'0');
 
 
-    clock.innerText = `${hours}:${minutes}:${seconds}`;
+    clock.innerText = `${hours}:${minutes}`;
 }
 
 // setInterval(실행할 함수, 몇 ms마다 일어날지) -> 일정시간 "이후"부터 일정시간 "마다" 함수를 실행

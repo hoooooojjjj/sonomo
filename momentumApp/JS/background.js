@@ -1,12 +1,6 @@
 const images = [
-    "img/0.jpeg",
-    "img/1.jpeg",
-    "img/2.jpeg",
-    "img/3.jpeg",
-    "img/4.jpeg",
-    "img/5.jpeg",
-    "img/6.jpeg",
-]
+    "img/0.jpeg", "img/1.jpeg","img/2.jpeg","img/3.jpeg","img/4.jpeg","img/5.jpeg","img/6.jpeg","img/7.jpeg","img/8.jpeg","img/9.jpeg",
+    "img/10.jpeg", "img/11.jpeg","img/12.jpeg",];
 
 const randomIndexToImg = Math.floor(Math.random() * images.length);
 const todaysimg = images[randomIndexToImg];
@@ -14,8 +8,8 @@ const todaysimg = images[randomIndexToImg];
 document.body.style.backgroundImage = `url(${todaysimg})`; // 난 body를 통해서 배경을 채웠다.
 
 // 배경색이 어두우면 글자색을 흰색으로
-if(todaysimg === "img/3.jpeg" || todaysimg === "img/4.jpeg" || todaysimg === "img/5.jpeg" || todaysimg === "img/6.jpeg"){
-    document.body.classList.add("white");
+if(todaysimg === "img/8.jpeg" || todaysimg === "img/9.jpeg" || todaysimg === "img/10.jpeg" || todaysimg === "img/11.jpeg" || todaysimg === "img/12.jpeg"|| todaysimg === "img/4.jpeg"){
+    document.body.classList.add("black");
 }
 
 
