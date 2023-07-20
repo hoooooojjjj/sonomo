@@ -3,6 +3,8 @@ const toDoList = document.querySelector("#todo-list");
 const toDoInput = toDoForm.querySelector("input"); // 부모 요소 안에 있는 자식 요소는 부모요소.querySelector("자식요소") 로 가져온다.
 // const toDoInput = document.querySelector("#todo-form input");
 
+const modal1 = document.querySelector(".modal-content");
+
 const TODOS_KEY = "todos";
 
 let toDos = [];
@@ -31,16 +33,30 @@ function paintToDo(todo){ // 사용자가 입력한 todo를 화면에 표시
     span.innerText = todo.text; // span에 toDo 입력값 할당
     li.id = todo.id; // 각 입력값이 들어있는 li마다 id를 가지게 됨.
     const toDoButton = document.createElement("button"); // 새로운 button 생성
-    toDoButton.innerText = "❌"; 
+    toDoButton.innerText = "X"; 
     toDoButton.addEventListener("click", deleteToDo); // 클릭 시 삭제
-
+    // 체크박스 만들기
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.style.marginRight = "2px";
+    checkBox.addEventListener("change", function() {
+        if (this.checked) {
+            span.style.textDecoration = "line-through";
+        } else {
+            span.style.textDecoration = "none";
+        }
+      });
+    li.appendChild(checkBox);
     // form 안에 input을 넣어서 sumit으로 이벤트를 발생시켜야 한다.
     // 그러나 그 안에 또 button이 있으면! 엔터가 중복으로 먹히는 오류가 발생한다..
     // 그러니, 버튼을 넣을 땐 꼭! form 밖으로 뺴서 넣자!!!!!
-
     li.appendChild(span); // span을 li의 자식요소로 추가
     li.appendChild(toDoButton); // button을 li의 자식요소로 추가
     toDoList.appendChild(li); // li을 ul의 자식요소로 추가
+
+    span.classList.add("span");
+    li.classList.add("li");
+    toDoButton.classList.add("todoDeletebtn");
 }
 
 function handletoDoSubmit(event){ // 사용자가 엔터를 누르면 실행

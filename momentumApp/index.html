@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MomentumClone</title>
     <link rel="stylesheet" href="CSS/style.css"/>
+    
 </head>
 <body>
     <div id="greetingContainer">
@@ -20,21 +21,23 @@
     <h2 id="clock"></h2>
     <h1 id="greeting" class="hidden"></h1>
 </div>
-    <form id="todo-form">
-        <input id ="todo-input" type="text" placeholder="To Do를 입력하고 엔터를 누르세요" required>
-    </form>
-    
-    <!-- 투두리스트를 form 밖으로 빼내면 이런 일은 없었다.. form 안에 input과 button이 동시에 있으면 안되는듯?-->
-    <ul id="todo-list"></ul> 
-
     <div id="quote">
         <div></div>
         <div></div>
     </div>
+    <button id="todoModalOpen">todo</button>
+        <div class="modal-content">
+          <ul id="todo-list"></ul> 
+          <form id="todo-form">
+            <input id ="todo-input" type="text" placeholder=" new todo" required>
+        </form>
+        <!-- 투두리스트를 form 밖으로 빼내면 이런 일은 없었다.. form 안에 input과 button이 동시에 있으면 안되는듯?-->
+      </div>
     <script src="JS/greetings.js"></script>
     <script src="JS/clock.js"></script>
     <script src="JS/quotes.js"></script>
     <script src="JS/background.js"></script>
     <script src="JS/todo.js"></script>
+    <script src="JS/todoModal.js"></script>
 </body>
 </html>

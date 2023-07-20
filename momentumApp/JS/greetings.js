@@ -5,6 +5,7 @@ const author1 = document.querySelector("#quote div:last-child");
 const toDoForm1 = document.querySelector("#todo-form");
 const toDoList1 = document.querySelector("#todo-list");
 const toDoInput1 = toDoForm1.querySelector("input");
+const todoModalOpenBtn1 = document.querySelector("#todoModalOpen");
 
 // *** form 태그에 관하여 feat-preventDefault()***
 
@@ -39,11 +40,13 @@ function paintGreeting(username){
     clock1.classList.remove(HIDDEN_CLASSNAME);
     quote1.classList.remove(HIDDEN_CLASSNAME);
     author1.classList.remove(HIDDEN_CLASSNAME);
+    todoModalOpenBtn1.classList.remove(HIDDEN_CLASSNAME);
+    
 
     // hello 숨기기
     hello.classList.add(HIDDEN_CLASSNAME);
 
-    // window.open("/index.html");
+    
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -55,9 +58,8 @@ if(savedUsername === null) {
     clock1.classList.add(HIDDEN_CLASSNAME);
     quote1.classList.add(HIDDEN_CLASSNAME);
     author1.classList.add(HIDDEN_CLASSNAME);
-    toDoForm1.classList.add(HIDDEN_CLASSNAME);
-
-
+    todoModalOpenBtn1.classList.add(HIDDEN_CLASSNAME);
+    
 }
 else { 
     paintGreeting(savedUsername);

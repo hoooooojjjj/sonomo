@@ -9,7 +9,7 @@
 }
 
 body{
-    color : white;
+    color : rgb(255, 255, 255);
     background: no-repeat;
     background-size: cover;
 }
@@ -48,7 +48,82 @@ body{
 #quote{
     text-align: center;
     position: relative;
-    bottom: -305px;
+    bottom: -330px;
     font-size: 5px;
 } 
 
+#todoModalOpen{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    background-color: #00000000;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+#todoModalOpen:hover{
+    color: #aaa;
+}
+
+/* 모달 스타일 */
+  .modal-content {
+    display: none;
+    background-color: #00000000;
+    /* 레이어층 결정 */
+    z-index: 1;    
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 120px;   
+    padding: 20px;
+    /* overflow: scroll; */
+  } 
+
+
+  #todo-input{
+    font-size: 10px;
+    position: absolute;
+    bottom: 1px;
+    left: 10px;
+    color: white;
+    background-color: #00000000;
+    border: solid 1px rgb(231, 227, 227);
+    border-radius: 3px;
+    outline: none;
+    width: 142px;
+  }
+  ::placeholder {
+    /* 대부분의 최신 브라우저 */
+    color: rgba(239, 236, 236, 0.663); /* 원하는 색상으로 변경 */
+    font-size: 10px;
+  }
+  #todo-list{
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    list-style: none;
+  }
+
+.span{
+    display: inline-block;
+    width: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 10px;
+}
+
+.li{
+    height: 20px;
+}
+
+.todoDeletebtn{
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    background-color: #00000000;
+    border: none;
+}
