@@ -8,6 +8,10 @@
     display: none;
 }
 
+.white{
+    color : white;
+}
+
 /* body{
     color : red;
     background: no-repeat;

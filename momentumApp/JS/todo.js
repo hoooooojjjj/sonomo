@@ -20,13 +20,16 @@ function savedToDos(){ // todo를 localstorage에 배열로 저장
 function deleteToDo(event){ // X 클릭시 투두 삭제
     const li = event.target.parentNode; // 이벤트가 일어난 대상의 부모
     li.remove(); // remove() 함수 -> 요소를 지울 수 있음.
+    toDos = toDos.filter(function(todo){return todo.id !== parseInt(li.id) }); // 클릭한 버튼의 li의 id를 가진 배열의 요소를 지움.
+    savedToDos(); // 바뀐 배열을 다시 로컬에 저장
 }
 
 function paintToDo(todo){ // 사용자가 입력한 todo를 화면에 표시
     // 입력한 toDo를 li로 표시
     const li = document.createElement("li"); // 새로운 li 생성
     const span = document.createElement("span"); // 새로운 span 생성
-    span.innerText = todo; // span에 toDo 입력값 할당
+    span.innerText = todo.text; // span에 toDo 입력값 할당
+    li.id = todo.id; // 각 입력값이 들어있는 li마다 id를 가지게 됨.
     const toDoButton = document.createElement("button"); // 새로운 button 생성
     toDoButton.innerText = "❌"; 
     toDoButton.addEventListener("click", deleteToDo); // 클릭 시 삭제
@@ -48,8 +51,12 @@ function handletoDoSubmit(event){ // 사용자가 엔터를 누르면 실행
     // 서로 별개이다. 영향을 주고 받지 않는다. 
     // 그렇기 때문에 toDoInput.value = "";를 해도 toDo에 복사한 toDoInput.value은 사라지지 않는다.
 
-    toDos.push(toDo); // toDo를 배열에 저장
-    paintToDo(toDo);
+    const toDoObj = { // 사용자의 입력값을 id와 함께 전달하기 위해 객체를 만듬 -> 각 입력값이 어떤 건지 알기 위해
+        text : toDo,
+        id : Date.now() // 랜덤한 수를 반환함.
+    }
+    toDos.push(toDoObj); // toDoOdj를 배열에 저장
+    paintToDo(toDoObj);
     savedToDos();
 
 }
@@ -67,4 +74,3 @@ if(savedToDo !== null){
     // 가져올 수 있다.
 
 }
-
