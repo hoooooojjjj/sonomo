@@ -19,12 +19,14 @@ body{
 }
 
 #greetingContainer{
+    font-size: 1.7rem;
     position: relative;
-    bottom: -165px;
+    bottom: -300px;
     text-align: center;
 }
 #login-input{
-    width: 265px;
+    font-size: 1.7rem;
+    width: 440px;
     border: none;
     border-bottom: 3px solid #ffffff; 
     outline: none; 
@@ -34,13 +36,11 @@ body{
 
 #enterContainer{
     position: relative;
-    bottom: -120px;
+    bottom: -220px;
     text-align: center;
 }
 #clock{
-    font-size: 70px;
-    height: 70px;
-    
+    font-size: 120px;
 }
 
 #clock,#greeting,#quote,#todoModalOpen,#hello,#linkOpen,#quoteModalOpen {
@@ -56,20 +56,21 @@ body{
 }
 
 #greeting{
-    font-size: 20px;
+    font-size: 30px;
 }
 
 #quote{
     text-align: center;
     position: relative;
-    bottom: -330px;
-    font-size: 5px;
+    bottom: -565px;
+    font-size: 1.0rem;
 } 
 
 #todoModalOpen{
+    font-size: 1.5rem;
     position: absolute;
     bottom: 10px;
-    right: 15px;
+    right: 35px;
     background-color: #00000000;
     border: none;
     outline: none;
@@ -89,59 +90,69 @@ body{
     border-radius: 5px;
     position: absolute;
     bottom: 40px;
-    right: 10px;
-    width: 120px;   
+    right: 20px;
+    width: 190px;   
     padding: 20px;
     /* overflow: scroll; */
   } 
 
 
   #todo-input{
-    font-size: 10px;
+    font-size: 1.2rem;
     position: absolute;
-    bottom: 1px;
-    left: 10px;
+    bottom: 10px;
+    left: -8px;
     color: white;
     background-color: #00000000;
     border: solid 1px rgb(255, 255, 255);
     border-radius: 3px;
     outline: none;
-    width: 142px;
+    width: 220px;
   }
 
   ::placeholder {
     /* 대부분의 최신 브라우저 */
     /* color: rgba(239, 236, 236, 0.663); 원하는 색상으로 변경 */
-    font-size: 10px;
+    font-size: 1.2rem;
     color: rgba(239, 236, 236, 0.663); /* 원하는 색상으로 변경 */
   }
 
   #todo-list{
     position: absolute;
-    bottom: 15px;
+    bottom: 40px;
     left: 10px;
     list-style: none;
   }
 
 .span{
     display: inline-block;
-    width: 120px;
+    width: 190px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: 10px;
 }
 
 .li{
-    height: 20px;
+    font-size: 1.2rem;
+    height: 2rem;
+    position: relative;
+    left : -17px;
+}
+.checkbox{
+    margin-right : 5px;
+    position: relative;
+    bottom: 5px;
+    
 }
 
 .todoDeletebtn{
     color: white;
     display: inline-block;
-    font-size: 12px;
+    font-size: 1.1rem;
     background-color: #00000000;
     border: none;
+    position: relative;
+    bottom: 7px;
 }
 
 #linkOpen{
@@ -152,6 +163,7 @@ body{
     border: none;
     outline: none;
     color: white;
+    font-size: 1.5rem;
 }
 
 #linkOpen:hover{
@@ -172,49 +184,60 @@ body{
     /* overflow: scroll; */
   } 
   #link-inputName{
-    font-size: 10px;
+    font-size: 1.2rem;
     position: absolute;
-    top: 5px;
+    top: 17px;
     left: 3px;
     color: white;
     background-color: #00000000;
     border: solid 1px rgb(255, 255, 255);
     border-radius: 3px;
     outline: none;
-    width: 60px;
+    width: 100px;
   }
     #link-inputLink{
-    font-size: 10px;
+    font-size: 1.2rem;
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 17px;
+    right: -75px;
     color: white;
     background-color: #00000000;
     border: solid 1px rgb(255, 255, 255);
     border-radius: 3px;
     outline: none;
-    width: 60px;
+    width: 100px;
   }
   .linkDeleteBtn{
     color: white;
     display: inline-block;
-    font-size: 12px;
+    font-size: 1.2rem;
     background-color: #00000000;
     border: none;
+    position: relative;
+    top : -5px;
   }
 
 #link-list{
   position: absolute;
-  left: 10px;
+  left: 21px;
+  top : 50px;
   list-style: none;
+}
+
+.li1{
+    font-size: 1.2rem;
+    height: 2rem;
+    width: 215px;
+    position: relative;
+    left : -17px;
 }
 .a{
     display: inline-block;
-    width: 116px;
+    width: 200px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: 10px;
+    font-size: 1.2rem;
     text-decoration: none;
     color: white;
 }
@@ -240,30 +263,35 @@ body{
     border: none;
     outline: none;
     color: white;
+    font-size: 1.5rem;
+}
+
+#quoteModalOpen:hover{
+    color: #aaa;
 }
 
 #quote-inputquote{
-    font-size: 10px;
+    font-size: 1.2rem;
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     left: 3px;
     color: white;
     background-color: #00000000;
     border: solid 1px rgb(255, 255, 255);
     border-radius: 3px;
     outline: none;
-    width: 100px;
+    width: 150px;
 }
 
 #quote-inputauther{
-    font-size: 10px;
+    font-size: 1.2rem;
     position: absolute;
-    bottom: 1px;
+    bottom: 17px;
     left: 3px;
     color: white;
     background-color: #00000000;
     border: solid 1px rgb(255, 255, 255);
     border-radius: 3px;
     outline: none;
-    width: 100px;
+    width: 150px;
 }

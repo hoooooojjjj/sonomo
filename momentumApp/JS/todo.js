@@ -38,7 +38,7 @@ function paintToDo(todo){ // 사용자가 입력한 todo를 화면에 표시
     // 체크박스 만들기
     const checkBox = document.createElement("input");
     checkBox.type = "checkbox";
-    checkBox.style.marginRight = "2px";
+    checkBox.classList.add("checkbox");
     checkBox.addEventListener("change", function() {
         if (this.checked) {
             span.style.textDecoration = "line-through";
