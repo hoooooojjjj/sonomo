@@ -45,7 +45,7 @@ function paintLink(linkVar){
     li.appendChild(a);
     li.appendChild(linkDeleteBtn);
 
-    a.classList.add("span");
+    a.classList.add("a");
     li.classList.add("li");
 }
 

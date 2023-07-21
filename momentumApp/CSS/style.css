@@ -167,7 +167,7 @@ body{
     position: absolute;
     top: 30px;
     left: 13px; 
-    width: 120px;   
+    width: 100px;   
     padding: 20px;
     /* overflow: scroll; */
   } 
@@ -181,7 +181,7 @@ body{
     border: solid 1px rgb(231, 227, 227);
     border-radius: 3px;
     outline: none;
-    width: 70px;
+    width: 60px;
   }
     #link-inputLink{
     font-size: 10px;
@@ -193,7 +193,7 @@ body{
     border: solid 1px rgb(231, 227, 227);
     border-radius: 3px;
     outline: none;
-    width: 70px;
+    width: 60px;
   }
   .linkDeleteBtn{
     color: white;
@@ -207,4 +207,14 @@ body{
   position: absolute;
   left: 10px;
   list-style: none;
+}
+.a{
+    display: inline-block;
+    width: 117px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    text-decoration: none;
+    color: white;
 }
