@@ -57,6 +57,8 @@ function paintToDo(todo){ // 사용자가 입력한 todo를 화면에 표시
     span.classList.add("span");
     li.classList.add("li");
     toDoButton.classList.add("todoDeletebtn");
+
+    
 }
 
 function handletoDoSubmit(event){ // 사용자가 엔터를 누르면 실행

@@ -29,6 +29,7 @@ body{
     border-bottom: 3px solid #ffffff; 
     outline: none; 
     background-color: #00000000;
+    color: #ffffff;
 }
 
 #enterContainer{
@@ -39,6 +40,19 @@ body{
 #clock{
     font-size: 70px;
     height: 70px;
+    
+}
+
+#clock,#greeting,#quote,#todoModalOpen,#hello   {
+    animation: displayFirst 0.5s ease-in-out 1 alternate;
+}
+
+@keyframes displayFirst{
+    from{
+        color: #00000000;
+    }to{
+        color: #ffffff;
+    }
 }
 
 #greeting{
@@ -66,14 +80,13 @@ body{
     color: #aaa;
 }
 
-/* 모달 스타일 */
+/* 투두 모달 스타일 */
   .modal-content {
     display: none;
     background-color: #00000000;
     /* 레이어층 결정 */
     z-index: 1;    
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: absolute;
     bottom: 40px;
     right: 10px;
@@ -95,11 +108,14 @@ body{
     outline: none;
     width: 142px;
   }
+
   ::placeholder {
     /* 대부분의 최신 브라우저 */
-    color: rgba(239, 236, 236, 0.663); /* 원하는 색상으로 변경 */
+    /* color: rgba(239, 236, 236, 0.663); 원하는 색상으로 변경 */
     font-size: 10px;
+    color: rgba(239, 236, 236, 0.663); /* 원하는 색상으로 변경 */
   }
+
   #todo-list{
     position: absolute;
     bottom: 15px;
@@ -126,4 +142,69 @@ body{
     font-size: 12px;
     background-color: #00000000;
     border: none;
+}
+
+#linkOpen{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: #00000000;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+#linkOpen:hover{
+    color: #aaa;
+}
+/* 링크 모달 스타일 */
+.linkModal {
+    display: none;
+    background-color: #00000000;
+    /* 레이어층 결정 */
+    z-index: 1;    
+    border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    left: 13px; 
+    width: 120px;   
+    padding: 20px;
+    /* overflow: scroll; */
+  } 
+  #link-inputName{
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: white;
+    background-color: #00000000;
+    border: solid 1px rgb(231, 227, 227);
+    border-radius: 3px;
+    outline: none;
+    width: 70px;
+  }
+    #link-inputLink{
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    background-color: #00000000;
+    border: solid 1px rgb(231, 227, 227);
+    border-radius: 3px;
+    outline: none;
+    width: 70px;
+  }
+  .linkDeleteBtn{
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    background-color: #00000000;
+    border: none;
+  }
+
+#link-list{
+  position: absolute;
+  left: 10px;
+  list-style: none;
 }

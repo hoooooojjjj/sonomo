@@ -34,6 +34,16 @@
         </form>
         <!-- 투두리스트를 form 밖으로 빼내면 이런 일은 없었다.. form 안에 input과 button이 동시에 있으면 안되는듯?-->
       </div>
+
+      <button id="linkOpen">Link</button>
+      <div class="linkModal">
+        <ul id="link-list"></ul> 
+        <form id="link-form">
+            <input id ="link-inputName" type="text" placeholder=" new link name" required>
+            <input id ="link-inputLink" type="text" placeholder=" new link upload" required>
+            <button class="hidden" type="submit"></button>
+        </form>
+      </div>
     <script src="JS/greetings.js"></script>
     <script src="JS/clock.js"></script>
     <script src="JS/quotes.js"></script>
@@ -41,6 +51,7 @@
     <script src="JS/todo.js"></script>
     <script src="JS/todoModal.js"></script>
     <script src="JS/chrome.js"></script>
+    <script src="JS/link.js"></script>
     </div>
 </body>
 </html>
