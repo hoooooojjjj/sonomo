@@ -43,7 +43,7 @@ body{
     
 }
 
-#clock,#greeting,#quote,#todoModalOpen,#hello   {
+#clock,#greeting,#quote,#todoModalOpen,#hello,#linkOpen,#quoteModalOpen {
     animation: displayFirst 0.5s ease-in-out 1 alternate;
 }
 
@@ -103,7 +103,7 @@ body{
     left: 10px;
     color: white;
     background-color: #00000000;
-    border: solid 1px rgb(231, 227, 227);
+    border: solid 1px rgb(255, 255, 255);
     border-radius: 3px;
     outline: none;
     width: 142px;
@@ -175,10 +175,10 @@ body{
     font-size: 10px;
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 3px;
     color: white;
     background-color: #00000000;
-    border: solid 1px rgb(231, 227, 227);
+    border: solid 1px rgb(255, 255, 255);
     border-radius: 3px;
     outline: none;
     width: 60px;
@@ -187,10 +187,10 @@ body{
     font-size: 10px;
     position: absolute;
     top: 5px;
-    right: 5px;
+    right: 10px;
     color: white;
     background-color: #00000000;
-    border: solid 1px rgb(231, 227, 227);
+    border: solid 1px rgb(255, 255, 255);
     border-radius: 3px;
     outline: none;
     width: 60px;
@@ -210,11 +210,60 @@ body{
 }
 .a{
     display: inline-block;
-    width: 117px;
+    width: 116px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 10px;
     text-decoration: none;
     color: white;
+}
+.quoteModal{
+    display: none;
+    background-color: #00000000;
+    /* 레이어층 결정 */
+    z-index: 1;    
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
+    left: 13px; 
+    width: 100px;   
+    padding: 20px;
+    /* overflow: scroll; */
+}
+
+#quoteModalOpen{
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    background-color: #00000000;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+#quote-inputquote{
+    font-size: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 3px;
+    color: white;
+    background-color: #00000000;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 3px;
+    outline: none;
+    width: 100px;
+}
+
+#quote-inputauther{
+    font-size: 10px;
+    position: absolute;
+    bottom: 1px;
+    left: 3px;
+    color: white;
+    background-color: #00000000;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 3px;
+    outline: none;
+    width: 100px;
 }

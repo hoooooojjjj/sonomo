@@ -6,6 +6,9 @@ const toDoForm1 = document.querySelector("#todo-form");
 const toDoList1 = document.querySelector("#todo-list");
 const toDoInput1 = toDoForm1.querySelector("input");
 const todoModalOpenBtn1 = document.querySelector("#todoModalOpen");
+const quoteModalOpen1 = document.querySelector("#quoteModalOpen");
+const linkOpenBtn1 = document.querySelector("#linkOpen");
+
 
 // *** form 태그에 관하여 feat-preventDefault()***
 
@@ -41,6 +44,8 @@ function paintGreeting(username){
     quote1.classList.remove(HIDDEN_CLASSNAME);
     author1.classList.remove(HIDDEN_CLASSNAME);
     todoModalOpenBtn1.classList.remove(HIDDEN_CLASSNAME);
+    quoteModalOpen1.classList.remove(HIDDEN_CLASSNAME);
+    linkOpenBtn1.classList.remove(HIDDEN_CLASSNAME);
     
 
     // hello 숨기기
@@ -59,6 +64,8 @@ if(savedUsername === null) {
     quote1.classList.add(HIDDEN_CLASSNAME);
     author1.classList.add(HIDDEN_CLASSNAME);
     todoModalOpenBtn1.classList.add(HIDDEN_CLASSNAME);
+    quoteModalOpen1.classList.add(HIDDEN_CLASSNAME);
+    linkOpenBtn1.classList.add(HIDDEN_CLASSNAME);
     
 }
 else { 
