@@ -297,10 +297,3 @@ body{
     outline: none;
     width: 150px;
 }
-#weather{
-    position: absolute;
-    right : 10px;
-    top : 10px;
-    font-size: 1.3rem;
-    text-align :right;
-}
