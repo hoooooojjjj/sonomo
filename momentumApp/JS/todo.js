@@ -35,6 +35,7 @@ function paintToDo(todo){ // 사용자가 입력한 todo를 화면에 표시
     const toDoButton = document.createElement("button"); // 새로운 button 생성
     toDoButton.innerText = "X"; 
     toDoButton.addEventListener("click", deleteToDo); // 클릭 시 삭제
+
     // 체크박스 만들기
     const checkBox = document.createElement("input");
     checkBox.type = "checkbox";
@@ -42,11 +43,26 @@ function paintToDo(todo){ // 사용자가 입력한 todo를 화면에 표시
     checkBox.addEventListener("change", function() {
         if (this.checked) {
             span.style.textDecoration = "line-through";
+            todo.check = true; // 체크 저장기능을 위해 체크표시 유무를 객체(배열)에 저장
+            savedToDos(); // 체크 유무를 넣은 배열을 로컬 스토리지에 저장
         } else {
             span.style.textDecoration = "none";
+            todo.check = false;
+            savedToDos();
         }
       });
     li.appendChild(checkBox);
+
+    if(todo.check === true){ // 새로고침했을 때 로컬에 체크가 true로 되어있으면 체크 표시 뜨게 하기
+        checkBox.checked = true;
+        span.style.textDecoration = "line-through";
+        
+    }else{
+        checkBox.checked = false;
+        span.style.textDecoration = "none";
+    }
+
+
     // form 안에 input을 넣어서 sumit으로 이벤트를 발생시켜야 한다.
     // 그러나 그 안에 또 button이 있으면! 엔터가 중복으로 먹히는 오류가 발생한다..
     // 그러니, 버튼을 넣을 땐 꼭! form 밖으로 뺴서 넣자!!!!!
@@ -57,7 +73,6 @@ function paintToDo(todo){ // 사용자가 입력한 todo를 화면에 표시
     span.classList.add("span");
     li.classList.add("li");
     toDoButton.classList.add("todoDeletebtn");
-
     
 }
 
@@ -71,7 +86,8 @@ function handletoDoSubmit(event){ // 사용자가 엔터를 누르면 실행
 
     const toDoObj = { // 사용자의 입력값을 id와 함께 전달하기 위해 객체를 만듬 -> 각 입력값이 어떤 건지 알기 위해
         text : toDo,
-        id : Date.now() // 랜덤한 수를 반환함.
+        id : Date.now(), // 랜덤한 수를 반환함.
+        check : false // 체크 저장을 위해 체크 표시 유무를 객체에 넣기
     }
     toDos.push(toDoObj); // toDoOdj를 배열에 저장
     paintToDo(toDoObj);
@@ -82,13 +98,13 @@ function handletoDoSubmit(event){ // 사용자가 엔터를 누르면 실행
 toDoForm.addEventListener("submit", handletoDoSubmit);
 
 const savedToDo = localStorage.getItem(TODOS_KEY); 
+
 if(savedToDo !== null){
     const parsedToDo = JSON.parse(savedToDo); // 2. 다시 그 문자열을 배열로 전환
-
-    parsedToDo.forEach(paintToDo); // 
-
+    parsedToDo.forEach(paintToDo); 
     toDos = parsedToDo;  // 기존 로컬에 있는 요소들을 현재 toDos 배열에 계속해서 추가하기
     // => 이러면 새로고침할 때마다 toDos 배열은 리셋되지만 로컬에는 남아있기 때문에 그걸 다시 toDos 배열에 넣어서
     // 가져올 수 있다.
 
 }
+
