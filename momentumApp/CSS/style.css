@@ -35,13 +35,15 @@ body{
 }
 
 #enterContainer{
-    position: relative;
-    bottom: -220px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0%);
     text-align: center;
 }
 #clock{
     font-size: 120px;
-    text-align: center;
+
 }
 
 #clock,#greeting,#quote,#todoModalOpen,#hello,#linkOpen,#quoteModalOpen,#weather {
@@ -58,13 +60,14 @@ body{
 
 #greeting{
     font-size: 35px;
-    text-align: center;
 }
 
 #quote{
     text-align: center;
-    position: relative;
-    bottom: -565px;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, 0%);
     font-size: 1.0rem;
 } 
 
