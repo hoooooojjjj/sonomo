@@ -36,7 +36,7 @@ body{
 
 #enterContainer{
     position: absolute;
-    top: 30%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, 0%);
     text-align: center;

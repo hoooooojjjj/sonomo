@@ -7,6 +7,7 @@ const modal1 = document.querySelector(".modal-content");
 
 const TODOS_KEY = "todos";
 
+
 let toDos = [];
 
 function savedToDos(){ // todo를 localstorage에 배열로 저장
@@ -87,8 +88,10 @@ function handletoDoSubmit(event){ // 사용자가 엔터를 누르면 실행
     const toDoObj = { // 사용자의 입력값을 id와 함께 전달하기 위해 객체를 만듬 -> 각 입력값이 어떤 건지 알기 위해
         text : toDo,
         id : Date.now(), // 랜덤한 수를 반환함.
-        check : false // 체크 저장을 위해 체크 표시 유무를 객체에 넣기
+        check : false, // 체크 저장을 위해 체크 표시 유무를 객체에 넣기
+        // date : `${date.getFullYear()} : ${date.getMonth()} : ${date.getDate()}`, // 추가한 날짜를 추가
     }
+    console.log(toDoObj.date);
     toDos.push(toDoObj); // toDoOdj를 배열에 저장
     paintToDo(toDoObj);
     savedToDos();
