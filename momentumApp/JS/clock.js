@@ -2,7 +2,7 @@ const clock = document.querySelector("#clock");
 function getClock(){
     const date = new Date();
 
-    // tring.padStart(문자열 길이, 채워넣을 문자) -> 문자열의 길이를 일정하게 유지하고 앞 빈칸에 원하는 문자를 채워넣을 수 있음.
+    // string.padStart(문자열 길이, 채워넣을 문자) -> 문자열의 길이를 일정하게 유지하고 앞 빈칸에 원하는 문자를 채워넣을 수 있음.
     const hours = String(date.getHours()).padStart(2,'0');
     const minutes = String(date.getMinutes()).padStart(2,'0');
     // const seconds = String(date.getSeconds()).padStart(2,'0');
