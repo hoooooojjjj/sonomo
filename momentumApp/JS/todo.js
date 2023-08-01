@@ -71,7 +71,7 @@ function paintToDo(todo){ // 사용자가 입력한 todo를 화면에 표시
     const span = document.createElement("span"); // 새로운 span 생성
     span.innerText = todo.text; // span에 toDo 입력값 할당
     li.id = todo.id; // 각 입력값이 들어있는 li마다 id를 가지게 됨.
-    li.classList.add(todo.date); // 각 입력값이 들어있는 li마다 class에 추가한 당시 날짜를 가지게 됨.
+    li.classList.add(todo.date); // 각 입력값(투두)이 들어있는 li마다 class에 추가한 당시 날짜를 가지게 됨.
     const toDoButton = document.createElement("button"); // 새로운 button 생성
     toDoButton.innerText = "X"; 
     toDoButton.addEventListener("click", deleteToDo); // 클릭 시 삭제
@@ -110,9 +110,8 @@ function handletoDoSubmit(event){ // 사용자가 엔터를 누르면 실행
         text : toDo,
         id : Date.now(), // 랜덤한 수를 반환함.
         check : false, // 체크 저장을 위해 체크 표시 유무를 객체에 넣기
-        date : calender.value // 추가한 날짜를 추가
+        date : calender.value // 선택한 날짜를 추가
     }
-    console.log(toDoObj.date);
     toDos.push(toDoObj); // toDoOdj를 배열에 저장
     paintToDo(toDoObj);
     savedToDos();
@@ -122,9 +121,13 @@ const nowDate = new Date();
 
 toDoForm.addEventListener("submit", handletoDoSubmit);
 
-// 새로고침했을 때 오늘 날짜를 자동으로 세팅
-calender.value = `${String(nowDate.getFullYear())}-${String((nowDate.getMonth()+1)).padStart(2,"0")}-${String(nowDate.getDate())}`;
+let currentYear = nowDate.getFullYear();
+let currentMonth = String((nowDate.getMonth()+1)).padStart(2,"0")
+let currentDate = String((nowDate.getDate())).padStart(2,"0")
 
+// 새로고침했을 때 오늘 날짜를 자동으로 세팅
+calender.value = `${currentYear}-${currentMonth}-${currentDate}`;
+console.log(calender.value);
 const savedToDo = localStorage.getItem(TODOS_KEY); 
 
 if(savedToDo !== null){
